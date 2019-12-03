@@ -5,6 +5,10 @@ import aiohttp
 import voluptuous as vol
 
 
+# registry of inverters
+REGISTRY = [XHybrid, X3]
+
+
 class InverterError(Exception):
     """Indicates error communicating with inverter"""
 
@@ -240,7 +244,3 @@ class X3(Inverter):
         Return sensor map
         """
         return cls.__sensor_map
-
-
-# registry of inverters
-REGISTRY = [XHybrid, X3]
